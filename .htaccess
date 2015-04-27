@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule   ^page/([A-Za-z0-9-]+)/?$    /bit/index.php/?currentpage=$1   [NC,L]
+RewriteRule   ^post/([A-Za-z0-9-]+)/?$    /bit/post.php/?slug=$1   [NC,L]
